@@ -1,0 +1,10 @@
+<div class="alert alert-primary" role="alert" [hidden]="!adicionado">
+    Funcionário adicionado: <strong>{{nome}}</strong>
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Nome</label>
+    <input type="text" class="form-control" (focus)="adicionado = false" [(ngModel)]="nome">
+</div>
+
+<button type="button" class="btn btn-primary" (click)="adicionar()" [disabled]="nome.length == 0">Adicionar</button>
